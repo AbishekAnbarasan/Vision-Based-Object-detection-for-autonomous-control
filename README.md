@@ -33,7 +33,7 @@ class and perform maneuver based on the information from popular sensors like ul
 radar, stereo vision, optical flow, and depth from focus. The need to perform distinct autonomous maneuver for each
 class of object is overlooked.
 
-| ![Rally Car](rc.JPG) | 
+| ![Rally Car](images/rc.JPG) | 
 |:--:| 
 | ** Rally-Car with Jetson TX2 Hex-Core Processor **|
 
