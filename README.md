@@ -1,4 +1,4 @@
-# Vision-Based-Object-detection-for-autonomous-control
+# OBJECT DETECTION FOR AUTONOMOUS VEHICLES
 
 In recent years, autonomous cars have drawn major interest at both academic and industrial researches.
 The ability to have intelligence using neural network has created a necessity to develop autonomous
