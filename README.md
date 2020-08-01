@@ -14,14 +14,16 @@ algorithm into ROS.
 
 ### <ins>Table of contents</ins>:
   - [ Introduction ](#intro)
+  - [ Methodology ](#meth)
   - [ Data Description ](#desc)
-  - [ EDA ](#eda)
   - [ Result ](#res)
   - [ Conclusion ](#con)
 
 
 <a name='intro'></a>
+
 ### Introduction:
+
 Cars that can navigate through obstacles and perform autonomous maneuver is most fancied and sought out today.
 Cars, to be called "Autonomous", they must have the capability to know the environment through which they navigate
 and keep track of the objects around them, so it can make appropriate decision and navigate safely for a desired
@@ -44,3 +46,24 @@ primarily use the local obstacle detection method. The ability to provide intell
 maneuver for the identified class of object is studied. This includes accurate classification of the object in the track for
 re-planning the path in order to make a safe maneuver. I considered this as our motivation to integrate neural network
 concepts taught in class into ROS to achieve localization and trajectory planning for autonomous control of the rally-car
+
+<a name='meth'></a>
+
+### Methodology:
+
+The method is to integrate two distinct parts: One is physical component i.e., the rally car run through robot operatingsystem and another is vision i.e., the intelligence provided by the neural network algorithm(YOLO). The rally car can navigate on a pre-defined path with specified acceleration using AMCL algorithms and SLAM algorithm. The Inertial measurement unit (IMU) data is used to achieve steady movement along a particular direction. A trained algorithm capable of identifying three different classes of objects is provided to rally car. Through this intelligence, the rally-car performs distinct maneuver by identifying the class of object in its pre-defined path of motion
+
+![Rally Car](images/rc.JPG) 
+
+YOLO was chosen as base model to perform object detection and bounding box prediction for the study primarily because the The camera works at 30 frames per second. The YOLO network divides the images into S X S grid. The grid cell that has the center of an object is responsible for
+detecting that object. Each grid predicts a bounding box and confidence scores for those boxes. The confidence score for the bounding box is given as product of probability of object and intersection of union for a chosen threshold. It is made up of 24 convolutional layers followed by 2
+fully connected layers. Instead of the inception modules used by GoogLeNet, it uses 1 * 1 reduction layers followed by 3 * 3 convolutional layers. The output of the network is 7 * 7 * 30 tensor.
+
+<a name='desc'></a>
+
+### Data description:
+
+
+
+
+
