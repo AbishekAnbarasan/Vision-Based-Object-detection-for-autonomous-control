@@ -88,3 +88,10 @@ one of interest.
 [![result](images/result.JPG)]
 |:-:|
 |**Result of Validation**|
+
+
+<a name='conc'></a>
+
+### Conclusion:
+
+Thus, the project underscores the possibility of detecting object class by the rally car to perform distinct maneuver based on identified class.This application can be extensively used in specific pre-defined environments like industrial floors, hospital rooms and university halls to perform specific tasks based on the limited object found in such environment. For future research,  dynamic map generation, segmentation, dynamic manuever for the rally-car navigation can be integrated to enable the use of vision based autonomous controlled rally-car in much more dynamic applications.
